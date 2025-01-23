@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Noto_Serif } from "next/font/google";
+import { Noto_Sans } from "next/font/google";
 import "@/_styles/globals.css";
 
-const notoSerif = Noto_Serif({
+const notoSans = Noto_Sans({
   subsets: ["latin"],
 });
 
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${notoSerif} antialiased`}>{children}</body>
+      <body className={`${notoSans} antialiased`}>{children}</body>
     </html>
   );
 }
