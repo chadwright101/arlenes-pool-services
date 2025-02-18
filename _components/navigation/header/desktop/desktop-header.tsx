@@ -9,9 +9,9 @@ export function DesktopHeader({ isScrolled }: HeaderProps) {
   return (
     <div
       className={classNames(
-        "hidden relative pt-5 pb-[76px] px-15 items-end justify-between desktop:flex ease-in-out duration-300 overflow-hidden",
+        "hidden relative pt-5 pb-[76px] px-15 items-end justify-between desktop:flex ease-in-out duration-300 overflow-hidden desktop:duration-500",
         {
-          "pb-[15px] pt-[30px]": isScrolled,
+          "translate-y-[60px]": isScrolled,
         }
       )}
     >

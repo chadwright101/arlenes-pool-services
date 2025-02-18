@@ -25,9 +25,9 @@ export function Header() {
   return (
     <header
       className={classNames(
-        "sticky top-0 left-0 max-w-[1280px] mx-auto border-b-8 bg-white border-white z-50 ease-in-out duration-300 overflow-y-hidden",
+        "sticky top-0 left-0 max-w-[1280px] mx-auto border-b-8 bg-white border-white z-50 ease-in-out duration-300 overflow-y-hidden desktop:duration-500",
         {
-          "-top-4": isScrolled,
+          "-top-4 desktop:-top-[68px] border-blue": isScrolled,
         }
       )}
     >
@@ -43,7 +43,7 @@ export function Header() {
         className={classNames(
           "hidden desktop:block absolute top-14 -z-10 object-cover ease-in-out duration-500",
           {
-            "translate-y-10": isScrolled,
+            "translate-y-10 desktop:translate-y-28": isScrolled,
           }
         )}
         sizes="100vw"

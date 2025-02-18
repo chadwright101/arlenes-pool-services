@@ -37,7 +37,7 @@ export default function RootLayout({
         <div className="max-w-[1280px] mx-auto bg-white">
           <Header />
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </body>
     </html>
