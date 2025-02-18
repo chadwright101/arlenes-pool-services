@@ -16,6 +16,6 @@ export const buttonStyles = (
       "bg-lightBlue border-lightBlue text-white": !colorWhite,
       "desktop:hover:bg-blue desktop:hover:border-white desktop:hover:text-white":
         colorWhite && !disabled && !pending,
-      "opacity-50 desktop:cursor-not-allowed desktop:hover:none": pending,
+      "opacity-50 cursor-not-allowed hover:none": pending,
     }
   );

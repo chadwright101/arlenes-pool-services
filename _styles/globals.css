@@ -32,14 +32,14 @@ textarea {
   @apply text-black font-thin;
 }
 
-.spinner-large {
+.spinner-submit {
   width: 21px;
   height: 21px;
   position: relative;
 }
 
-.spinner-large::before,
-.spinner-large::after {
+.spinner-submit::before,
+.spinner-submit::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -48,11 +48,35 @@ textarea {
   top: 0;
   left: 0;
   border: 3px solid transparent;
-  border-top-color: #FFFFFF;
+  border-top-color: #4079B7;
   animation: spin 1s linear infinite;
 }
 
-.spinner-large::after {
+.spinner-submit::after {
+  animation-delay: 0.5s;
+}
+
+.spinner-contact {
+  width: 22.5px;
+  height: 22.5px;
+  position: relative;
+}
+
+.spinner-contact::before,
+.spinner-contact::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 3px solid transparent;
+  border-top-color: #4079B7;
+  animation: spin 1s linear infinite;
+}
+
+.spinner-contact::after {
   animation-delay: 0.5s;
 }
 

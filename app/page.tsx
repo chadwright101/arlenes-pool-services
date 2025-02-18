@@ -1,16 +1,22 @@
 "use client";
 
 import ButtonType from "@/_components/ui/buttons/button-type";
+import ShowEmailAddress from "@/_components/ui/contact/show-email-address";
+import ShowPhoneNumber from "@/_components/ui/contact/show-phone-number";
 import SectionHeading from "@/_components/ui/section-headings";
 
 export default function Home() {
   return (
     <div className="max-w-[1280px] pt-15 mx-auto px-5 desktop:px-10 space-y-10">
       <SectionHeading>Heading</SectionHeading>
-      <div className="bg-blue p-8">
+      <div className="bg-blue p-4">
         <ButtonType colorWhite cssClasses="desktop:place-self-start">
           Submit
         </ButtonType>
+      </div>
+      <div className="grid gap-5">
+        <ShowEmailAddress />
+        <ShowPhoneNumber />
       </div>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim numquam

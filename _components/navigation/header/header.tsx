@@ -25,9 +25,10 @@ export function Header() {
   return (
     <header
       className={classNames(
-        "sticky top-0 left-0 max-w-[1280px] mx-auto border-b-8 bg-white border-white z-50 ease-in-out duration-300 overflow-y-hidden desktop:duration-500",
+        "sticky left-0 max-w-[1280px] mx-auto border-b-8 bg-white z-50 ease-in-out duration-300 overflow-y-hidden desktop:duration-500",
         {
-          "-top-4 desktop:-top-[68px] border-blue": isScrolled,
+          "-top-[18px] desktop:-top-[68px] border-blue": isScrolled,
+          "border-white top-0": !isScrolled,
         }
       )}
     >
