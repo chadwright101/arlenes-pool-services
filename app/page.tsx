@@ -1,7 +1,9 @@
+import SectionHeading from "@/_components/ui/section-headings";
+
 export default function Home() {
   return (
-    <div className="max-w-[1280px] mx-auto px-5 desktop:px-10">
-      <h1>Heading</h1>
+    <div className="max-w-[1280px] pt-15 mx-auto px-5 desktop:px-10">
+      <SectionHeading h2>Heading</SectionHeading>
       <h3>Subheading</h3>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim numquam
