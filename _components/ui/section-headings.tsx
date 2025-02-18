@@ -1,8 +1,6 @@
 import classNames from "classnames";
 
 interface HeadingProps {
-  h2?: boolean;
-  h3?: boolean;
   children: React.ReactNode;
   borderBlue?: boolean;
   cssClasses?: string;

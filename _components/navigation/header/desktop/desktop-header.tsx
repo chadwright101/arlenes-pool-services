@@ -15,7 +15,10 @@ export function DesktopHeader({ isScrolled }: HeaderProps) {
         }
       )}
     >
-      <Link href="/" className="flex gap-1 items-center">
+      <Link
+        href="/"
+        className="flex gap-1 items-center hover:opacity-90 ease-in-out duration-500"
+      >
         <Image
           src="/images/arlenes-pool-services-logo.png"
           alt="Arlene's Pool Services"
@@ -40,7 +43,7 @@ export function DesktopHeader({ isScrolled }: HeaderProps) {
               <li key={id}>
                 <Link
                   href={url}
-                  className="font-light tracking-[-0.01rem] ease-in-out duration-200 hover:text-green"
+                  className="text-paragraph ease-in-out duration-200 hover:text-blue"
                 >
                   {title}
                 </Link>

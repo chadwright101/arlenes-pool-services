@@ -1,10 +1,17 @@
+"use client";
+
+import ButtonType from "@/_components/ui/buttons/button-type";
 import SectionHeading from "@/_components/ui/section-headings";
 
 export default function Home() {
   return (
-    <div className="max-w-[1280px] pt-15 mx-auto px-5 desktop:px-10">
-      <SectionHeading h2>Heading</SectionHeading>
-      <h3>Subheading</h3>
+    <div className="max-w-[1280px] pt-15 mx-auto px-5 desktop:px-10 space-y-10">
+      <SectionHeading>Heading</SectionHeading>
+      <div className="bg-blue p-8">
+        <ButtonType colorWhite cssClasses="desktop:place-self-start">
+          Submit
+        </ButtonType>
+      </div>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim numquam
         quasi, dolorum obcaecati molestias sed. Facere hic voluptatum nam
