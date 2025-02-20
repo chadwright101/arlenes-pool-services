@@ -32,9 +32,10 @@ export function MobileHeader({ isScrolled }: HeaderProps) {
     <div className="relative px-5 pt-2.5 pb-[22px] phone:pb-7 min-[540px]:pb-10 tablet:pb-14 tablet:px-10 min-[1000px]:pb-16 desktop:hidden">
       <div
         className={classNames(
-          "flex w-full items-center justify-between ease-in-out duration-300",
+          "flex w-full items-center justify-between ease-in-out duration-500",
           {
-            "translate-y-[18px]": isScrolled,
+            "translate-y-3 phone:translate-y-[18px] min-[540px]:translate-y-6 tablet:translate-y-[42px] min-[1000px]:translate-y-[50px]":
+              isScrolled,
           }
         )}
       >
@@ -113,7 +114,7 @@ export function MobileHeader({ isScrolled }: HeaderProps) {
         className={classNames(
           "absolute -mx-5 top-14 -z-10 object-cover ease-in-out duration-[750ms] tablet:-mx-10",
           {
-            "translate-y-12": isScrolled,
+            "translate-y-12 tablet:translate-y-16": isScrolled,
           }
         )}
         sizes="100vw"
