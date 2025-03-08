@@ -23,8 +23,13 @@ h6 {
   @apply text-subheading;
 }
 
-p {
+p,
+li {
   @apply text-paragraph;
+}
+
+li {
+  @apply font-extralight
 }
 
 input,

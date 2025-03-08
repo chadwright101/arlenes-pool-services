@@ -3,8 +3,33 @@
     "phone": "1234",
     "email": "example@yahoo.com"
   },
-  "heroSlider": [],
-  "services": [],
+  "services": {
+    "cleaningChecklist": [
+      "Net leaves",
+      "Brush walls",
+      "Clean scumline",
+      "Vacuum rim",
+      "Vacuum pool",
+      "Backwash sand filter",
+      "Empty pump basket",
+      "Clean cell",
+      "Empty weir basket",
+      "Clean cartridge filter"
+    ],
+    "checks": [
+      "Check timers",
+      "Check for leaks around pump/filter",
+      "Switch heater ON / OFF",
+      "Switch solar panels ON / OFF"
+    ],
+    "covers": ["Put safety net on pool", "Put thermal blanket on pool"],
+    "jacuzzi": [
+      "Jacuzzi fill / empty",
+      "Jacuzzi start-up",
+      "Jacuzzi clean cartridge",
+      "Jacuzzi vacuum"
+    ]
+  },
   "gallery": [],
   "meetTheTeam": [
     {
