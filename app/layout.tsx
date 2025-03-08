@@ -33,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${notoSerif} antialiased bg-blue/10`}>
+      <body className={`${notoSerif} antialiased bg-blue/20`}>
         <div className="max-w-[1280px] mx-auto bg-white">
           <Header />
           {children}

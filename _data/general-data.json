@@ -30,7 +30,31 @@
       "Jacuzzi vacuum"
     ]
   },
-  "gallery": [],
+  "gallery": [
+    "/images/gallery/gallery-slider-1.jpg",
+    "/images/gallery/gallery-slider-2.jpg",
+    "/images/gallery/gallery-slider-3.jpg",
+    "/images/gallery/gallery-slider-4.jpg",
+    "/images/gallery/gallery-slider-5.jpg",
+    "/images/gallery/gallery-slider-6.jpg",
+    "/images/gallery/gallery-slider-7.jpg",
+    "/images/gallery/gallery-slider-8.jpg",
+    "/images/gallery/gallery-slider-9.jpg",
+    "/images/gallery/gallery-slider-10.jpg",
+    "/images/gallery/gallery-slider-11.jpg",
+    "/images/gallery/gallery-slider-13.jpg",
+    "/images/gallery/gallery-slider-14.jpg",
+    "/images/gallery/gallery-slider-15.jpg",
+    "/images/gallery/gallery-slider-16.jpg",
+    "/images/gallery/gallery-slider-17.jpg",
+    "/images/gallery/gallery-slider-18.jpg",
+    "/images/gallery/gallery-slider-19.jpg",
+    "/images/gallery/gallery-slider-20.jpg",
+    "/images/gallery/gallery-slider-21.jpg",
+    "/images/gallery/gallery-slider-22.jpg",
+    "/images/gallery/gallery-slider-23.jpg",
+    "/images/gallery/gallery-slider-24.jpg"
+  ],
   "meetTheTeam": [
     {
       "name": "Arlene Wallace",

@@ -3,15 +3,15 @@ import ServicesChecklist from "./services-checklist";
 
 const ServicesSection = () => {
   return (
-    <section className="grid gap-10 px-5 py-10">
+    <section className="grid gap-10 px-5 py-5 tablet:px-10 desktop:py-0">
       <SectionHeading>Services</SectionHeading>
       <h3 className="hidden tablet:block">Our Maintenance Side Of Life</h3>
-      <div className="grid gap-10 tablet:grid-cols-[480px_1fr]">
+      <div className="grid gap-10 min-[1100px]:grid-cols-[480px_1fr]">
         <ServicesChecklist />
         <h3 className="text-center tablet:hidden">
           Our Maintenance Side Of Life
         </h3>
-        <div className="flex flex-col gap-10 tablet:order-first">
+        <div className="flex flex-col gap-4 tablet:order-first">
           <p className="text-center tablet:text-left">
             As part of our normal maintenance service, we check and balance the
             chemicals in the pool, including pH levels, chlorine, alkalinity and
@@ -39,20 +39,22 @@ const ServicesSection = () => {
         </div>
       </div>
       <h3 className="text-center tablet:text-left">Filtration Systems</h3>
-      <p className="text-center tablet:text-left">
-        In addition our company offers the services of a professional
-        experienced technician, to handle repair work on filtration system. This
-        includes installation of heat pumps, pool pumps, filters, and salt water
-        chlorinators. We also offer pool pump repairs.
-      </p>
-      <p className="text-center tablet:text-left">
-        Our friendly staff at our premises in Green Point Avenue will gladly
-        assist with testing your pool water and giving you experienced advise on
-        how to adjust the chemical levels in your pool.
-      </p>
-      <p className="text-center tablet:text-left">
-        We also offer repairs to pool cleaners and salt water chlorinators.
-      </p>
+      <div className="grid gap-4">
+        <p className="text-center tablet:text-left">
+          In addition our company offers the services of a professional
+          experienced technician, to handle repair work on filtration system.
+          This includes installation of heat pumps, pool pumps, filters, and
+          salt water chlorinators. We also offer pool pump repairs.
+        </p>
+        <p className="text-center tablet:text-left">
+          Our friendly staff at our premises in Green Point Avenue will gladly
+          assist with testing your pool water and giving you experienced advise
+          on how to adjust the chemical levels in your pool.
+        </p>
+        <p className="text-center tablet:text-left">
+          We also offer repairs to pool cleaners and salt water chlorinators.
+        </p>
+      </div>
     </section>
   );
 };

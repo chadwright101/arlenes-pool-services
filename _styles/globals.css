@@ -114,30 +114,6 @@ textarea {
   overflow: visible !important;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  width: 40px !important;
-  height: 100% !important;
-  @apply bg-white/80;
-  top: 22px !important;
-  transition: all 0.2s ease;
-}
-
-.swiper-button-next:after,
-.swiper-button-prev:after {
-  font-size: 20px !important;
-  color: #4079B7;
-  transition: color 0.2s ease;
-}
-
-.swiper-button-next {
-  right: 0 !important;
-}
-
-.swiper-button-prev {
-  left: 0 !important;
-}
-
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
   @apply bg-white;

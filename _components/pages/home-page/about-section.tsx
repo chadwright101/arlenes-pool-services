@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const AboutSection = () => {
   return (
-    <main className="grid gap-10 px-5 py-10 tablet:grid-cols-2 tablet:px-10 desktop:grid-cols-[2fr_1fr]">
+    <main className="grid gap-10 px-5 py-10 tablet:pt-15 tablet:grid-cols-2 tablet:px-10 desktop:grid-cols-[2fr_1fr]">
       <div className="flex gap-10 flex-col tablet:justify-between">
         <div className="grid gap-10">
           <SectionHeading cssClasses="tablet:text-left tablet:w-full tablet:pb-3 tablet:border-b-4 tablet:border-t-0 tablet:pt-0">

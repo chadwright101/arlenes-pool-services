@@ -15,7 +15,7 @@ const MeetTheTeamDesktop = ({ cssClasses }: MeetTheTeamProps) => {
       {meetTheTeam.map(({ image, name }, index) => (
         <li
           key={index}
-          className={classNames("space-y-5", {
+          className={classNames("flex flex-col gap-5", {
             "col-span-3 row-span-3": name === "Arlene Wallace",
           })}
         >

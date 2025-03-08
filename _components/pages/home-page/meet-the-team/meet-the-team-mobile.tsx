@@ -43,7 +43,7 @@ const MeetTheTeamMobile = ({ cssClasses, data }: Props) => {
       {data.map(({ image, name }, index) => (
         <SwiperSlide
           key={index}
-          className="max-w-[280px] h-auto pb-8 tablet:pb-10"
+          className="max-w-[280px] h-auto pb-10 tablet:pb-10"
         >
           <h4 className="mb-2 text-center">{name}</h4>
           <Image

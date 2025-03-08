@@ -8,7 +8,7 @@ const { meetTheTeam } = teamData;
 
 const MeetTheTeamSection = () => {
   return (
-    <section className="flex flex-col gap-10 px-5 py-10 tablet:px-10 overflow-hidden">
+    <section className="flex flex-col gap-10 px-5 py-10 tablet:px-10 overflow-hidden desktop:py-5">
       <SectionHeading>Meet The Team</SectionHeading>
       <div className="tablet:overflow-hidden desktop:hidden">
         <MeetTheTeamMobile data={meetTheTeam} cssClasses="w-full" />
