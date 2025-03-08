@@ -5,5 +5,43 @@
   },
   "heroSlider": [],
   "services": [],
-  "gallery": []
+  "gallery": [],
+  "meetTheTeam": [
+    {
+      "name": "Arlene Wallace",
+      "image": "/images/meet-the-team/Arlene Wallace.jpg"
+    },
+    {
+      "name": "Andrew Nzima",
+      "image": "/images/meet-the-team/Andrew Nzima.jpg"
+    },
+    {
+      "name": "Avril Nel",
+      "image": "/images/meet-the-team/Avril Nel.jpg"
+    },
+    {
+      "name": "Bernadine Fouche",
+      "image": "/images/meet-the-team/Bernadine Fouche.jpg"
+    },
+    {
+      "name": "Bommi Gomo",
+      "image": "/images/meet-the-team/Bommi Gomo.jpg"
+    },
+    {
+      "name": "Isaac Saka",
+      "image": "/images/meet-the-team/Isaac Saka.jpg"
+    },
+    {
+      "name": "M.J. Mitchley",
+      "image": "/images/meet-the-team/MJ Mitchley.jpg"
+    },
+    {
+      "name": "Mathews Gondwe",
+      "image": "/images/meet-the-team/Mathews Gondwe.jpg"
+    },
+    {
+      "name": "Warren Ontong",
+      "image": "/images/meet-the-team/Warren Ontong.jpg"
+    }
+  ]
 }
