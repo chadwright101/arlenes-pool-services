@@ -14,7 +14,7 @@ const SectionHeading = ({
   return (
     <h2
       className={classNames(
-        "border-y-4 pt-2 pb-2.5 text-center desktop:text-left desktop:w-full desktop:pb-3 desktop:border-b-4 desktop:border-t-0 desktop:pt-0",
+        "border-y-4 pt-2 pb-2.5 text-center mx-auto desktop:text-left desktop:w-full desktop:pb-3 desktop:border-b-4 desktop:border-t-0 desktop:pt-0",
         { "border-blue": borderBlue, "border-lightBlue": !borderBlue },
         cssClasses
       )}

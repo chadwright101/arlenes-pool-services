@@ -7,7 +7,7 @@ const AboutSection = () => {
     <main className="grid gap-10 px-5 py-10 tablet:grid-cols-2 tablet:px-10 desktop:grid-cols-[2fr_1fr]">
       <div className="flex gap-10 flex-col tablet:justify-between">
         <div className="grid gap-10">
-          <SectionHeading cssClasses="place-self-center tablet:text-left tablet:w-full tablet:pb-3 tablet:border-b-4 tablet:border-t-0 tablet:pt-0">
+          <SectionHeading cssClasses="tablet:text-left tablet:w-full tablet:pb-3 tablet:border-b-4 tablet:border-t-0 tablet:pt-0">
             About Us
           </SectionHeading>
           <p>
@@ -27,12 +27,12 @@ const AboutSection = () => {
       </div>
       <div>
         <Image
-          src="/images/placeholder.png"
+          src="/images/arlenes-pool-services-team.jpg"
           alt="Arlene's Pool Services"
           width={800}
           height={800}
           sizes="(max-width: 800px) 100vw, 33vw"
-          className="h-full w-full object-cover tablet:aspect-[4/3] desktop:aspect-video"
+          className="h-full w-full object-cover aspect-[4/3] desktop:aspect-video"
         />
       </div>
     </main>
