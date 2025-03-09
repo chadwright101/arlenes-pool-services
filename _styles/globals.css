@@ -28,13 +28,9 @@ li {
   @apply text-paragraph;
 }
 
-li {
-  @apply font-extralight
-}
-
 input,
 textarea {
-  @apply text-black font-thin;
+  @apply text-black;
 }
 
 .spinner-submit {

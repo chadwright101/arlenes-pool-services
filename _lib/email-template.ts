@@ -18,11 +18,10 @@ export const emailTemplate = ({
     <title>Arlene's Pool Services</title>
   </head>
   <body style="font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 1rem;">
-    <table style="width: 100%; background-color: #      blue: "#4079B7",
-;">
+    <table style="width: 100%; background-color: #4079B7;">
       <tr>
         <td>
-          <h1 style="padding: 0 1rem; color: white;">Arlene's Pool Services</h1>
+          <h1 style="padding: 0 1rem; color: white">Arlene's Pool Services</h1>
         </td>
       </tr>
     </table>

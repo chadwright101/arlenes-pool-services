@@ -1,4 +1,5 @@
 import AboutSection from "@/_components/pages/home-page/about-section";
+import ContactSection from "@/_components/pages/home-page/contact/contact-section";
 import GallerySection from "@/_components/pages/home-page/gallery/gallery-section";
 import HeroSection from "@/_components/pages/home-page/hero-section";
 import MeetTheTeamSection from "@/_components/pages/home-page/meet-the-team/meet-the-team-section";
@@ -26,6 +27,9 @@ export default function Home() {
       <WaterDivider cssClasses="desktop:hidden" />
       <div className="-translate-y-28 tablet:-translate-y-28" id="team" />
       <MeetTheTeamSection />
+      <WaterDivider flip />
+      <div className="-translate-y-24 tablet:-translate-y-28" id="contact" />
+      <ContactSection />
     </div>
   );
 }
