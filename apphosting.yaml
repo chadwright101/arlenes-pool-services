@@ -1,5 +1,5 @@
 # Firebase secret setting
-# command === "firebase apphosting:secrets:set SMTP_HOST"
+# go to Google Cloud Console's Secret Manager for this project, and then add the secrets manually. Each secret MUST have the location manually set as europe-west4
 
 runConfig:
   minInstances: 0
@@ -14,5 +14,3 @@ env:
     secret: SMTP_PORT
   - variable: SMTP_SEND_TO
     secret: SMTP_SEND_TO
-  - variable: NEXT_PUBLIC_RECAPTCHA_SITE_KEY
-    value: 6LcH69QqAAAAAB2bF7Gfhq73kOVKm1lt7w5f0ZWc
