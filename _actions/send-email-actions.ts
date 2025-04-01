@@ -40,7 +40,7 @@ export async function sendEmail(formData: FormData): Promise<void> {
 
       const transporter = nodemailer.createTransport({
         host: process.env.SMTP_HOST as string,
-        port: parseInt(process.env.SMTP_PORT as string, 10),
+        port: 587,
         secure: false,
         auth: {
           user: process.env.SMTP_USER as string,
