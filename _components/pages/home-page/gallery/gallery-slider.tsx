@@ -9,11 +9,12 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
+import { GalleryProps } from "@/_types/wordpress-types";
 
 interface Props {
   cssClasses?: string;
   desktop?: boolean;
-  data: string[];
+  data: GalleryProps[];
 }
 
 const GallerySlider = ({ cssClasses, desktop, data }: Props) => {
@@ -45,17 +46,18 @@ const GallerySlider = ({ cssClasses, desktop, data }: Props) => {
             prevEl: ".swiper-button-prev",
           }}
         >
-          {data.map((slide, index) => (
-            <SwiperSlide key={index} className="mb-10">
-              <Image
-                src={slide}
-                alt={`Arlene's Pool Services - Gallery Image ${index + 1}`}
-                width={600}
-                height={400}
-                className="w-full h-[400px] object-cover"
-              />
-            </SwiperSlide>
-          ))}
+          {data.length > 0 &&
+            data[0].acf.photo_gallery.gallery[0].map((image, index) => (
+              <SwiperSlide key={index} className="mb-10">
+                <Image
+                  src={image.full_image_url}
+                  alt={`Arlene's Pool Services - Gallery Image ${index + 1}`}
+                  width={600}
+                  height={400}
+                  className="w-full h-[400px] object-cover"
+                />
+              </SwiperSlide>
+            ))}
           <button
             className="swiper-button-prev absolute top-[43%] z-10 left-[40px] cursor-pointer grid place-items-center rounded-full bg-white/[90%] w-[50px] h-[50px] hover:bg-white ease-in-out duration-300"
             aria-label="Show previous image"
@@ -118,17 +120,18 @@ const GallerySlider = ({ cssClasses, desktop, data }: Props) => {
           },
         }}
       >
-        {data.map((slide, index) => (
-          <SwiperSlide key={index} className="pb-10">
-            <Image
-              src={slide}
-              alt={`Arlene's Pool Services - Gallery Image ${index + 1}`}
-              width={800}
-              height={800}
-              className="aspect-square object-cover"
-            />
-          </SwiperSlide>
-        ))}
+        {data.length > 0 &&
+          data[0].acf.photo_gallery.gallery[0].map((image, index) => (
+            <SwiperSlide key={index} className="pb-10">
+              <Image
+                src={image.full_image_url}
+                alt={`Arlene's Pool Services - Gallery Image ${index + 1}`}
+                width={800}
+                height={800}
+                className="aspect-square object-cover"
+              />
+            </SwiperSlide>
+          ))}
       </Swiper>
     );
   }
