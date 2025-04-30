@@ -19,13 +19,13 @@ const GallerySection = ({ cssClasses }: GallerySectionProps) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const { username, password, slideshow } = await getWordpressDetails();
+      const { username, password } = await getWordpressDetails();
 
       const authToken = btoa(`${username}:${password}`);
 
       try {
         const response = await fetch(
-          `https://wordpress.arlenespools.co.za/wp-json/wp/v2/${slideshow}`,
+          `https://wordpress.arlenespools.co.za/wp-json/wp/v2/gallery`,
           {
             headers: {
               Authorization: `Basic ${authToken}`,
@@ -59,10 +59,22 @@ const GallerySection = ({ cssClasses }: GallerySectionProps) => {
     >
       <SectionHeading>Gallery</SectionHeading>
       <div className="overflow-hidden desktop:hidden">
-        <GallerySlider data={galleryData} />
+        {!showLoadingState ? (
+          <GallerySlider data={galleryData} />
+        ) : (
+          <div className="grid place-items-center min-h-[400px] max-h-[500px]">
+            <div className="spinner-large" />
+          </div>
+        )}
       </div>
       <div className="hidden overflow-hidden desktop:block">
-        <GallerySlider desktop data={galleryData} />
+        {!showLoadingState ? (
+          <GallerySlider desktop data={galleryData} />
+        ) : (
+          <div className="grid place-items-center h-[440px]">
+            <div className="spinner-large" />
+          </div>
+        )}
       </div>
     </section>
   );
