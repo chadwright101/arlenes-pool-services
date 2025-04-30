@@ -1,18 +1,16 @@
 import Image from "next/image";
 
-import teamData from "@/_data/general-data.json";
 import classNames from "classnames";
-
-const { meetTheTeam } = teamData;
 
 interface MeetTheTeamProps {
   cssClasses?: string;
+  data: Array<{ name: string; image: number; imageUrl: string }>;
 }
 
-const MeetTheTeamDesktop = ({ cssClasses }: MeetTheTeamProps) => {
+const MeetTheTeamDesktop = ({ cssClasses, data }: MeetTheTeamProps) => {
   return (
     <ul className={classNames("grid grid-cols-6 gap-10", cssClasses)}>
-      {meetTheTeam.map(({ image, name }, index) => (
+      {data.map(({ image, name, imageUrl }, index) => (
         <li
           key={index}
           className={classNames("flex flex-col gap-5", {
@@ -22,7 +20,7 @@ const MeetTheTeamDesktop = ({ cssClasses }: MeetTheTeamProps) => {
           <p className="text-subheading">{name}</p>
           <div className="h-full">
             <Image
-              src={image}
+              src={imageUrl}
               alt={`${name} - Arlene's Pool Services`}
               width={640}
               height={800}

@@ -4,7 +4,12 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: {
     deviceSizes: [425, 800, 1280],
-    domains: ["wordpress.arlenespools.co.za"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "wordpress.arlenespools.co.za",
+      },
+    ],
   },
 };
 

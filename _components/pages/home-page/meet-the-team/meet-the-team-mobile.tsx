@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 
 interface Props {
   cssClasses?: string;
-  data: Array<{ name: string; image: string }>;
+  data: Array<{ name: string; image: number; imageUrl: string }>;
 }
 
 const MeetTheTeamMobile = ({ cssClasses, data }: Props) => {
@@ -40,14 +40,14 @@ const MeetTheTeamMobile = ({ cssClasses, data }: Props) => {
         } as React.CSSProperties
       }
     >
-      {data.map(({ image, name }, index) => (
+      {data.map(({ imageUrl, name }, index) => (
         <SwiperSlide
           key={index}
           className="max-w-[280px] h-auto pb-10 tablet:pb-10"
         >
           <h4 className="mb-2 text-center">{name}</h4>
           <Image
-            src={image}
+            src={imageUrl}
             alt={`${name} - Arlene's Pool Services`}
             width={280}
             height={280}

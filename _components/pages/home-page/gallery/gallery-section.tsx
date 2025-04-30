@@ -1,13 +1,14 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
+import classNames from "classnames";
+
 import SectionHeading from "@/_components/ui/section-headings";
 import GallerySlider from "./gallery-slider";
-
-import galleryData from "@/_data/general-data.json";
-import classNames from "classnames";
-import { useEffect, useState } from "react";
-import { GalleryProps } from "@/_types/wordpress-types";
 import { getWordpressDetails } from "@/_actions/wordpress-actions";
+
+import { GalleryProps } from "@/_types/wordpress-types";
 
 interface GallerySectionProps {
   cssClasses?: string;
@@ -45,10 +46,6 @@ const GallerySection = ({ cssClasses }: GallerySectionProps) => {
 
     fetchData();
   }, []);
-
-  useEffect(() => {
-    console.log("Gallery Data:", galleryData);
-  }, [galleryData]);
 
   return (
     <section
