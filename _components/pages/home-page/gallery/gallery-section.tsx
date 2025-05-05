@@ -6,7 +6,7 @@ import classNames from "classnames";
 
 import SectionHeading from "@/_components/ui/section-headings";
 import GallerySlider from "./gallery-slider";
-import { getWordpressDetails } from "@/_actions/wordpress-actions";
+import { fetchGalleryData } from "@/_actions/wordpress-actions";
 
 import { GalleryProps } from "@/_types/wordpress-types";
 
@@ -20,27 +20,12 @@ const GallerySection = ({ cssClasses }: GallerySectionProps) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const { username, password } = await getWordpressDetails();
-
-      const authToken = btoa(`${username}:${password}`);
-
       try {
-        const response = await fetch(
-          `https://wordpress.arlenespools.co.za/wp-json/wp/v2/gallery`,
-          {
-            headers: {
-              Authorization: `Basic ${authToken}`,
-              "Content-Type": "application/json",
-            },
-          }
-        );
-
-        const data = await response.json();
-
+        const data = await fetchGalleryData();
         setGalleryData(data);
         setShowLoadingState(false);
       } catch (error) {
-        console.error("Error fetching property data:", error);
+        console.error("Error fetching gallery data:", error);
       }
     };
 
