@@ -19,8 +19,7 @@ export async function fetchGalleryData() {
           Authorization: `Basic ${authToken}`,
           "Content-Type": "application/json",
         },
-        // This ensures the request is made server-side
-        cache: "no-store",
+        next: { revalidate: 60 },
       }
     );
 
@@ -78,7 +77,7 @@ export async function fetchMediaDetails(imageIds: number[]) {
           Authorization: `Basic ${authToken}`,
           "Content-Type": "application/json",
         },
-        cache: "no-store",
+        next: { revalidate: 60 },
       }
     );
 
@@ -121,7 +120,7 @@ export async function fetchSingleMediaItem(id: number) {
           Authorization: `Basic ${authToken}`,
           "Content-Type": "application/json",
         },
-        cache: "no-store",
+        next: { revalidate: 60 },
       }
     );
 
