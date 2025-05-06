@@ -1,5 +1,10 @@
 "use server";
 
+import {
+  transformGalleryImage,
+  transformTeamMemberImage,
+} from "@/_lib/utils/image-transformations";
+
 export async function getWordpressDetails() {
   return {
     username: process.env.WORDPRESS_USER,
@@ -19,7 +24,7 @@ export async function fetchGalleryData() {
           Authorization: `Basic ${authToken}`,
           "Content-Type": "application/json",
         },
-        next: { revalidate: 60 },
+        next: { revalidate: 1 },
       }
     );
 
@@ -27,7 +32,43 @@ export async function fetchGalleryData() {
       throw new Error(`Failed to fetch gallery data: ${response.status}`);
     }
 
-    return await response.json();
+    const galleryData = await response.json();
+
+    // Log the first image URL to see its structure
+    if (
+      galleryData.length > 0 &&
+      galleryData[0].acf?.photo_gallery?.gallery?.[0] &&
+      galleryData[0].acf.photo_gallery.gallery[0].length > 0
+    ) {
+      console.log(
+        "Original WordPress image URL:",
+        galleryData[0].acf.photo_gallery.gallery[0][0].full_image_url
+      );
+    }
+
+    // Transform gallery image URLs using ImageKit
+    if (
+      galleryData.length > 0 &&
+      galleryData[0].acf?.photo_gallery?.gallery?.[0]
+    ) {
+      galleryData[0].acf.photo_gallery.gallery[0] =
+        galleryData[0].acf.photo_gallery.gallery[0].map(
+          (image: { full_image_url: string }) => ({
+            ...image,
+            // Store both original and transformed URLs
+            original_image_url: image.full_image_url,
+            // Mobile version (square)
+            full_image_url: transformGalleryImage(image.full_image_url, false),
+            // Desktop version (landscape)
+            desktop_image_url: transformGalleryImage(
+              image.full_image_url,
+              true
+            ),
+          })
+        );
+    }
+
+    return galleryData;
   } catch (error) {
     console.error("Error fetching gallery data:", error);
     return [];
@@ -46,7 +87,7 @@ export async function fetchStaffData() {
           Authorization: `Basic ${authToken}`,
           "Content-Type": "application/json",
         },
-        next: { revalidate: 60 },
+        next: { revalidate: 1 },
       }
     );
 
@@ -77,7 +118,7 @@ export async function fetchMediaDetails(imageIds: number[]) {
           Authorization: `Basic ${authToken}`,
           "Content-Type": "application/json",
         },
-        next: { revalidate: 60 },
+        next: { revalidate: 1 },
       }
     );
 
@@ -120,7 +161,7 @@ export async function fetchSingleMediaItem(id: number) {
           Authorization: `Basic ${authToken}`,
           "Content-Type": "application/json",
         },
-        next: { revalidate: 60 },
+        next: { revalidate: 1 },
       }
     );
 
@@ -167,13 +208,17 @@ export async function fetchTeamData() {
     }
 
     const teamMembers = staffMembers.map((member) => {
-      const imageUrl = imageLookup[member.image] || "";
+      // Get the original image URL
+      const originalImageUrl = imageLookup[member.image] || "";
 
-      if (!imageUrl) {
+      if (!originalImageUrl) {
         console.log(
           `No image URL found for ${member.name} (ID: ${member.image})`
         );
       }
+
+      // Transform the image URL using ImageKit
+      const imageUrl = transformTeamMemberImage(originalImageUrl);
 
       return {
         name: member.name,
