@@ -5,11 +5,11 @@ import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { GalleryProps } from "@/_types/wordpress-types";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
-import { GalleryProps } from "@/_types/wordpress-types";
 
 interface Props {
   cssClasses?: string;
@@ -50,7 +50,7 @@ const GallerySlider = ({ cssClasses, desktop, data }: Props) => {
             data[0].acf.photo_gallery.gallery[0].map((image, index) => (
               <SwiperSlide key={index} className="mb-10">
                 <Image
-                  src={image.full_image_url}
+                  src={image.desktop_image_url || image.full_image_url}
                   alt={`Arlene's Pool Services - Gallery Image ${index + 1}`}
                   width={600}
                   height={400}

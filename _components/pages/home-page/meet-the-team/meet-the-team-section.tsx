@@ -3,12 +3,6 @@ import MeetTheTeamDesktop from "./meet-the-team-desktop";
 import MeetTheTeamMobile from "./meet-the-team-mobile";
 import { fetchTeamData } from "@/_actions/wordpress-actions";
 
-interface TeamMember {
-  name: string;
-  image: number;
-  imageUrl: string;
-}
-
 const teamDataPromise = fetchTeamData();
 
 const MeetTheTeamSection = async () => {
