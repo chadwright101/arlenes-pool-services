@@ -23,8 +23,11 @@ export async function fetchGalleryData() {
         headers: {
           Authorization: `Basic ${authToken}`,
           "Content-Type": "application/json",
+          "Cache-Control": "no-cache, no-store, must-revalidate",
         },
-        next: { revalidate: 1 },
+        next: {
+          revalidate: 300,
+        },
       }
     );
 
@@ -86,8 +89,11 @@ export async function fetchStaffData() {
         headers: {
           Authorization: `Basic ${authToken}`,
           "Content-Type": "application/json",
+          "Cache-Control": "no-cache, no-store, must-revalidate",
         },
-        next: { revalidate: 1 },
+        next: {
+          revalidate: 300,
+        },
       }
     );
 
@@ -117,8 +123,11 @@ export async function fetchMediaDetails(imageIds: number[]) {
         headers: {
           Authorization: `Basic ${authToken}`,
           "Content-Type": "application/json",
+          "Cache-Control": "no-cache, no-store, must-revalidate",
         },
-        next: { revalidate: 1 },
+        next: {
+          revalidate: 300,
+        },
       }
     );
 
@@ -160,8 +169,11 @@ export async function fetchSingleMediaItem(id: number) {
         headers: {
           Authorization: `Basic ${authToken}`,
           "Content-Type": "application/json",
+          "Cache-Control": "no-cache, no-store, must-revalidate",
         },
-        next: { revalidate: 1 },
+        next: {
+          revalidate: 300,
+        },
       }
     );
 
