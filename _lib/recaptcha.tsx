@@ -7,7 +7,7 @@ interface Props {
 const Recaptcha = ({ onChange }: Props) => {
   return (
     <ReCAPTCHA
-      sitekey="6LcH69QqAAAAAB2bF7Gfhq73kOVKm1lt7w5f0ZWc"
+      sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string}
       onChange={onChange}
       className="recaptcha"
     />
