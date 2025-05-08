@@ -10,7 +10,7 @@ import ButtonType from "@/_components/ui/buttons/button-type";
 
 const ContactForm = () => {
   const [submissionStartTime, setSubmissionStartTime] = useState(0);
-  const [validateRecaptcha, setValidateRecaptcha] = useState(true);
+  const [validateRecaptcha, setValidateRecaptcha] = useState(false);
   const [showEmailSubmitted, setShowEmailSubmitted] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
 
