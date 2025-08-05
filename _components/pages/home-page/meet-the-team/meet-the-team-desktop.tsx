@@ -10,25 +10,27 @@ interface MeetTheTeamProps {
 const MeetTheTeamDesktop = ({ cssClasses, data }: MeetTheTeamProps) => {
   return (
     <ul className={classNames("grid grid-cols-6 gap-10", cssClasses)}>
-      {data.map(({ image, name, imageUrl }, index) => (
-        <li
-          key={index}
-          className={classNames("flex flex-col gap-5", {
-            "col-span-3 row-span-3": name === "Arlene Wallace",
-          })}
-        >
-          <p className="text-subheading">{name}</p>
-          <div className="h-full">
-            <Image
-              src={imageUrl}
-              alt={`${name} - Arlene's Pool Services`}
-              width={640}
-              height={800}
-              className="object-cover h-full w-full"
-            />
-          </div>
-        </li>
-      ))}
+      {data
+        .filter(({ imageUrl }) => imageUrl)
+        .map(({ name, imageUrl }, index) => (
+          <li
+            key={index}
+            className={classNames("flex flex-col gap-5", {
+              "col-span-3 row-span-3": name === "Arlene Wallace",
+            })}
+          >
+            <p className="text-subheading">{name}</p>
+            <div className="h-full">
+              <Image
+                src={imageUrl}
+                alt={`${name} - Arlene's Pool Services`}
+                width={640}
+                height={800}
+                className="object-cover h-full w-full"
+              />
+            </div>
+          </li>
+        ))}
     </ul>
   );
 };

@@ -40,21 +40,23 @@ const MeetTheTeamMobile = ({ cssClasses, data }: Props) => {
         } as React.CSSProperties
       }
     >
-      {data.map(({ imageUrl, name }, index) => (
-        <SwiperSlide
-          key={index}
-          className="max-w-[280px] h-auto pb-10 tablet:pb-10"
-        >
-          <h4 className="mb-2 text-center">{name}</h4>
-          <Image
-            src={imageUrl}
-            alt={`${name} - Arlene's Pool Services`}
-            width={280}
-            height={280}
-            sizes="(max-width: 600px) 100vw, 50vw"
-          />
-        </SwiperSlide>
-      ))}
+      {data
+        .filter(({ imageUrl }) => imageUrl)
+        .map(({ imageUrl, name }, index) => (
+          <SwiperSlide
+            key={index}
+            className="max-w-[280px] h-auto pb-10 tablet:pb-10"
+          >
+            <h4 className="mb-2 text-center">{name}</h4>
+            <Image
+              src={imageUrl}
+              alt={`${name} - Arlene's Pool Services`}
+              width={280}
+              height={280}
+              sizes="(max-width: 600px) 100vw, 50vw"
+            />
+          </SwiperSlide>
+        ))}
     </Swiper>
   );
 };
