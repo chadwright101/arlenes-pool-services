@@ -29,21 +29,6 @@ const SocialIcons = ({ cssClasses, small }: Props) => {
             />
           </Link>
         </li>
-        <li>
-          <Link
-            href=""
-            target="_blank"
-            className="tablet:tablet:hover:opacity-80 ease-in-out duration-200"
-            aria-label="Get in touch on WhatsApp"
-          >
-            <Image
-              src={whatsapp}
-              alt="Get in touch on WhatsApp"
-              width={20}
-              height={20}
-            />
-          </Link>
-        </li>
       </ul>
     );
   } else {
@@ -59,21 +44,6 @@ const SocialIcons = ({ cssClasses, small }: Props) => {
             <Image
               src={facebook}
               alt="View our Facebook page"
-              width={28}
-              height={28}
-            />
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="https://wa.me/message/WCHULFMQ26MMK1"
-            className="grid place-items-center tablet:hover:opacity-80 ease-in-out duration-200 p-2 -m-2"
-            target="_blank"
-            aria-label="Get in touch on WhatsApp"
-          >
-            <Image
-              src={whatsapp}
-              alt="Get in touch on WhatsApp"
               width={28}
               height={28}
             />
