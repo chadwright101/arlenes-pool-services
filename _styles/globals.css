@@ -1,14 +1,46 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-*: initial;
+  --color-black: #1C1D1D;
+  --color-white: #FFFFFF;
+  --color-lightBlue: #47AAF8;
+  --color-blue: #4079B7;
+  --color-grey: #94A3B8;
+  --color-linkBlue: #0000FF;
+  --color-transparent: transparent;
+
+  --text-*: initial;
+  --text-paragraph: 1rem;
+  --text-paragraph--font-weight: 300;
+  --text-paragraph--line-height: 140%;
+  --text-subheading: 1rem;
+  --text-subheading--font-weight: 700;
+  --text-subheading--line-height: 120%;
+  --text-subheading--letter-spacing: -0.02rem;
+  --text-heading: 2.25rem;
+  --text-heading--font-weight: 400;
+  --text-heading--line-height: 110%;
+  --text-heading--letter-spacing: -0.045rem;
+
+  --breakpoint-*: initial;
+  --breakpoint-phone: 425px;
+  --breakpoint-tablet: 800px;
+  --breakpoint-desktop: 1280px;
+
+  --spacing-15: 60px;
+}
 
 html {
   scroll-behavior: smooth;
 }
 
 * {
-  color: #1C1D1D;
   font-family: 'Noto Serif', Arial, sans-serif;
+}
+
+body {
+  color: #1C1D1D;
 }
 
 h1,

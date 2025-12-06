@@ -42,34 +42,31 @@ export async function fetchGalleryData() {
       galleryData.length > 0 &&
       galleryData[0].acf?.photo_gallery?.gallery?.[0] &&
       galleryData[0].acf.photo_gallery.gallery[0].length > 0
-    ) {
-      console.log(
-        "Original WordPress image URL:",
-        galleryData[0].acf.photo_gallery.gallery[0][0].full_image_url
-      );
-    }
-
-    // Transform gallery image URLs using ImageKit
-    if (
-      galleryData.length > 0 &&
-      galleryData[0].acf?.photo_gallery?.gallery?.[0]
-    ) {
-      galleryData[0].acf.photo_gallery.gallery[0] =
-        galleryData[0].acf.photo_gallery.gallery[0].map(
-          (image: { full_image_url: string }) => ({
-            ...image,
-            // Store both original and transformed URLs
-            original_image_url: image.full_image_url,
-            // Mobile version (square)
-            full_image_url: transformGalleryImage(image.full_image_url, false),
-            // Desktop version (landscape)
-            desktop_image_url: transformGalleryImage(
-              image.full_image_url,
-              true
-            ),
-          })
-        );
-    }
+    )
+      if (
+        galleryData.length > 0 &&
+        galleryData[0].acf?.photo_gallery?.gallery?.[0]
+      ) {
+        // Transform gallery image URLs using ImageKit
+        galleryData[0].acf.photo_gallery.gallery[0] =
+          galleryData[0].acf.photo_gallery.gallery[0].map(
+            (image: { full_image_url: string }) => ({
+              ...image,
+              // Store both original and transformed URLs
+              original_image_url: image.full_image_url,
+              // Mobile version (square)
+              full_image_url: transformGalleryImage(
+                image.full_image_url,
+                false
+              ),
+              // Desktop version (landscape)
+              desktop_image_url: transformGalleryImage(
+                image.full_image_url,
+                true
+              ),
+            })
+          );
+      }
 
     return galleryData;
   } catch (error) {

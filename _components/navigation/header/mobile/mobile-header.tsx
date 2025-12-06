@@ -48,7 +48,7 @@ export function MobileHeader({ isScrolled }: HeaderProps) {
             priority
             className="ease-in-out duration-300 h-12 w-auto"
           />
-          <h1 className="text-[20px] font-bold flex flex-col mt-2">
+          <h1 className="!text-[20px] font-bold flex flex-col mt-2">
             Arlene's{" "}
             <span className="text-[14.5px] font-light -mt-1">
               Pool Services
